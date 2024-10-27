@@ -5,9 +5,7 @@ import {
   ArrowsPointingOutIcon,
   BackspaceIcon,
   CodeBracketIcon,
-  PencilIcon,
   PlayIcon,
-  XMarkIcon,
 } from '@heroicons/vue/24/outline'
 import Lang from '../../components/lang/Lang.vue'
 import { currentOrigin } from '../../utils/currentOrigin'
@@ -16,7 +14,6 @@ import { Program } from './Program'
 import { State } from './State'
 import { programBack } from './programBack'
 import { programFormatProgress } from './programFormatProgress'
-import { stateEditorExit } from './stateEditorExit'
 import { stateEditorOpen } from './stateEditorOpen'
 
 const props = defineProps<{
@@ -55,41 +52,21 @@ function fullscreenSupported() {
         <BackspaceIcon class="h-5 w-5" />
       </button>
 
-      <template v-if="state.isEditable">
-        <button
-          v-if="state.kind === 'Program'"
-          :title="lang.isZh() ? '编辑' : 'Edit'"
-          @click="stateEditorOpen(state, { fromKind: 'Program' })"
-        >
-          <PencilIcon class="h-5 w-5" />
-        </button>
+      <button
+        v-if="state.kind === 'Program'"
+        @click="stateEditorOpen(state, { fromKind: 'Program' })"
+        :title="lang.isZh() ? '查看源代码' : 'View source'"
+      >
+        <CodeBracketIcon class="h-5 w-5" />
+      </button>
 
-        <button
-          v-if="state.kind === 'Editor'"
-          @click="stateEditorExit(state)"
-          :title="lang.isZh() ? '退出编辑' : 'Exit editor'"
-        >
-          <XMarkIcon class="h-5 w-5" />
-        </button>
-      </template>
-
-      <template v-if="!state.isEditable">
-        <button
-          v-if="state.kind === 'Program'"
-          @click="stateEditorOpen(state, { fromKind: 'Program' })"
-          :title="lang.isZh() ? '查看源代码' : 'View source'"
-        >
-          <CodeBracketIcon class="h-5 w-5" />
-        </button>
-
-        <button
-          v-if="state.kind === 'Editor'"
-          @click="state.kind = 'Program'"
-          :title="lang.isZh() ? '回到卡片程序' : 'Back to the program'"
-        >
-          <PlayIcon class="h-5 w-5" />
-        </button>
-      </template>
+      <button
+        v-if="state.kind === 'Editor'"
+        @click="state.kind = 'Program'"
+        :title="lang.isZh() ? '回到卡片程序' : 'Back to the program'"
+      >
+        <PlayIcon class="h-5 w-5" />
+      </button>
 
       <a
         :href="`${origin}/mimors/${state.src}`"

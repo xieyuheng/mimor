@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <textarea
-    :disabled="!state.isEditable"
+    disabled
     name="text"
     spellcheck="false"
     class="h-full w-full resize-none bg-white px-3 py-2 font-mono text-base focus:outline-none disabled:bg-white dark:bg-stone-900 dark:disabled:bg-stone-900"
