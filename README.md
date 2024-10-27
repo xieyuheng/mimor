@@ -1,4 +1,4 @@
-# Mimor
+# Mimor Web Component
 
 [ [Webwite](https://mimor.app)
 | [Manual](https://readonly.link/manuals/https://mimor.app/contents/manual/en.json)
@@ -13,31 +13,6 @@ npm install     # Install dependencies
 npm run dev     # Start the dev server
 npm run check   # Type check
 npm run format  # Format the code
-```
-
-We use [FiDB](https://github.com/fidb-official/fidb) for our backend API.
-
-To start the HTTP API server using the example [`database`](database), run:
-
-```sh
-npm run api     # Start the backend server
-```
-
-Notes:
-
-- Node.js version must
-  be >= [20.1](https://nodejs.org/en/blog/release/v20.1.0)
-  or >= [18.17.0](https://nodejs.org/en/blog/release/v18.17.0).
-  - For the `recursive` option to `readdir` and `opendir`.
-- To work with the frontend dev server, the backend API port should be `5108` (the default port of FiDB).
-- The example username are `xieyuheng` and `cicada-lang`.
-- The example passwords are all `123456`.
-
-If you do not want to start local backend using `npm run api`,
-you can use the production backend during development:
-
-```sh
-npm run dev:with-prod-backend  # Start the dev server with the production backend
 ```
 
 ## Contributions

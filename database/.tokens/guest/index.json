@@ -1,8 +1,0 @@
-{
-  "issuer": ".guest-token-issuer",
-  "issuerRevision": "b1b0de0cbf6b6fc7543dd960e116fb6a",
-  "@path": ".tokens/guest",
-  "@revision": "2b2f824ceb06bc34d59a32d01d27a09d",
-  "@createdAt": 1696769206355,
-  "@updatedAt": 1696769206355
-}

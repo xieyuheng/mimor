@@ -1,1 +1,0 @@
-{"permissions":{"**":["data:post","data:get","data:put","data:patch","data:delete","data-find:get","file:post","file:get","file:put","file:delete","file-metadata:get","directory:post","directory:get","directory:delete"]},"@path":".groups/owner","@revision":"897d9974a7f8eebca0a0ae4f457799fc","@createdAt":1696151239309,"@updatedAt":1696151239309}
