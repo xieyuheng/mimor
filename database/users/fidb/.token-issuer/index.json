@@ -1,0 +1,8 @@
+{
+  "groups": ["user"],
+  "user": "fidb",
+  "@path": "users/fidb/.token-issuer",
+  "@revision": "4a4e1cd3aad101aff47597a2f2af77f8",
+  "@createdAt": 1696228143245,
+  "@updatedAt": 1696228143329
+}

@@ -1,0 +1,32 @@
+{
+  "src": "~/users/xieyuheng/public/contents/mo-jing.mimor",
+  "@path": "users/xieyuheng/recall/6a8542bb45faf5bd2a3bbae4d34cdc90db9ed209042ee5615ed378d31a955550",
+  "@revision": "44d9b2eaa25a4695460688937f72fe72",
+  "@createdAt": 1688555641016,
+  "@updatedAt": 1688555643855,
+  "text": "<元数据 主题色=\"墨\" />\n\n<问>\n  故，所得而後成也。\n\n  <答>\n    小故：有之不必然，無之必不然。體也，若尺有端。\n\n    大故：有之必然，無之必不然。若見之成見也。\n  </答>\n</问>\n",
+  "createdAt": 1688555641016,
+  "updatedAt": 1688555641016,
+  "sessionHistory": {
+    "1688555643823": {
+      "statistics": {
+        "trace": [{ "kind": "Remembered", "index": 0, "time": 1688555643813 }],
+        "startedAt": 1688555643260,
+        "endedAt": 1688555643822,
+        "duration": 562,
+        "forgettingRate": 0
+      }
+    }
+  },
+  "history": {
+    "1688555643823": {
+      "statistics": {
+        "trace": [{ "kind": "Remembered", "index": 0, "time": 1688555643813 }],
+        "startedAt": 1688555643260,
+        "endedAt": 1688555643822,
+        "duration": 562,
+        "forgettingRate": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "groups": ["guest"],
+  "@path": ".guest-token-issuer",
+  "@revision": "b1b0de0cbf6b6fc7543dd960e116fb6a",
+  "@createdAt": 1696151239310,
+  "@updatedAt": 1696151239310
+}

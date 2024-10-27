@@ -1,0 +1,49 @@
+---
+title: <front-cover>
+---
+
+We can add a front cover card by `<front-cover>`.
+
+For example:
+
+```xml
+<metadata theme-color="red" />
+
+<front-cover>
+  Self-helping notes about debugging.
+</front-cover>
+
+<question>
+  What is a bug?
+
+  <answer>
+    A bug is the difference between
+    the expected behavior of the program
+    and the observed behavior of the program.
+  </answer>
+</question>
+
+<cloze>
+  When found a bug in our program,
+  the most import thing to remember is:
+  Don't <blank>panic</blank>.
+</cloze>
+
+<question>
+  How to debug?
+
+  <answer>
+    (1) Clearly express the observed behavior.
+
+    (2) Clearly express the expected behavior.
+
+    (3) Guess what causes the difference and put the guess into test.
+
+    Don't panic. Be a scientist. Use logic.
+  </answer>
+</question>
+```
+
+Result:
+
+<mimor src="front-cover-example-1.mimor" />

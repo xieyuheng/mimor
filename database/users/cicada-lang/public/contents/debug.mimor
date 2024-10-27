@@ -1,0 +1,72 @@
+<metadata theme-color="orange" />
+
+<front-cover>
+  Debug notes
+</front-cover>
+
+<question>
+  When we found a bug in our program,
+  what is the most import thing to remember?
+
+  <answer>
+    Don't panic.
+  </answer>
+</question>
+
+<question>
+  What is a bug?
+
+  <answer>
+    A bug is the difference between
+    the expected behavior of the program
+    and the observed behavior of the program.
+  </answer>
+</question>
+
+<question>
+  How to debug?
+
+  <answer>
+    (1) Clearly express the observed behavior.
+
+    (2) Clearly express the expected behavior.
+
+    (3) Guess what causes the difference and put the guess into test.
+
+    Don't panic. Be a scientist. Use logic.
+  </answer>
+</question>
+
+<question>
+  When we are guessing the cause of the difference,
+  what is the most import thing to remember?
+
+  <answer>
+    All differences are caused by something.
+  </answer>
+</question>
+
+<question>
+  What is the cause of an effect?
+
+  <answer>
+    The cause of an effect is an attribute (or an aspect) of a model,
+    when we change it the effect will change because of it.
+  </answer>
+</question>
+
+<question>
+  What is a model?
+
+  <answer>
+    All cause must be understand in the context of a model.
+
+    (See Judea Pearl's book "Causality -- Models, Reasoning, and Inference".)
+
+    When trying to find the cause of a bug, our program is the model.
+  </answer>
+</question>
+
+<back-cover>
+  Happy hacking :)
+</back-cover>
