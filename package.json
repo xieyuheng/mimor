@@ -56,7 +56,6 @@
     "@vitejs/plugin-vue": "^5.1.4",
     "@volar/vue-typescript": "^1.6.5",
     "autoprefixer": "^10.4.20",
-    "cross-env": "^7.0.3",
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
     "prettier-plugin-organize-imports": "^4.1.0",
