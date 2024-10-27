@@ -14,12 +14,11 @@
   },
   "scripts": {
     "dev": "vite",
-    "dev:with-prod-backend": "cross-env VITE_BACKEND_URL='https://mimor.fidb.app:5108' npm run dev",
     "build:app": "vite build",
     "build:lib": "vite build -c vite-lib.config.mjs",
     "build": "npm run build:app && npm run build:lib",
     "check": "vue-tsc --noEmit",
-    "check:watch": "while true; do vue-tsc --noEmit --watch && break; done",
+    "check:watch": "vue-tsc --noEmit --watch",
     "check:ts": "tsc --noEmit",
     "check:ts:watch": "tsc --noEmit --watch",
     "test": "vitest --run",
