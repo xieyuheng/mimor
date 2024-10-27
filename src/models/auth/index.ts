@@ -1,7 +1,0 @@
-export * from './Auth'
-export * from './loginByPassword'
-export * from './loginByToken'
-export * from './loginByTokenIfNotAlready'
-export * from './logout'
-export * from './register'
-export * from './useGlobalAuth'

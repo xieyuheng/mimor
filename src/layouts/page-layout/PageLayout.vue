@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
-import { useGlobalAuth } from '../../models/auth'
-import { loginByTokenIfNotAlready } from '../../models/auth/loginByTokenIfNotAlready'
 import PageDesktopHead from './PageDesktopHead.vue'
 import PageDesktopSidebar from './PageDesktopSidebar.vue'
 import PageMobileFoot from './PageMobileFoot.vue'
@@ -10,12 +7,6 @@ import PageMobileHead from './PageMobileHead.vue'
 defineProps<{
   noMobileHead?: boolean
 }>()
-
-const auth = useGlobalAuth()
-
-onMounted(async () => {
-  await loginByTokenIfNotAlready()
-})
 </script>
 
 <template>

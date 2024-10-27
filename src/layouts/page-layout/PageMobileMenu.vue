@@ -6,24 +6,12 @@ import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import TransitionRotateInSlideOut from '../../components/transitions/TransitionRotateInSlideOut.vue'
 import Popup from '../../components/utils/Popup.vue'
 import RouteSyncWithQuery from '../../components/utils/RouteSyncWithQuery.vue'
-import { useGlobalAuth } from '../../models/auth'
-import { logout } from '../../models/auth/logout'
 import { useGlobalTheme } from '../../models/theme'
 import PageLogo from './PageLogo.vue'
 
-const auth = useGlobalAuth()
 const router = useRouter()
 const lang = useGlobalLang()
 const theme = useGlobalTheme()
-
-async function logoutAfterConfirming() {
-  const message = lang.isZh() ? '确定要退出吗？' : 'Are you sure to logout?'
-
-  if (window.confirm(message)) {
-    await logout()
-    router.replace('/')
-  }
-}
 </script>
 
 <template>
@@ -59,18 +47,6 @@ async function logoutAfterConfirming() {
             </button>
 
             <button
-              v-if="auth.user"
-              class="hover:underline"
-              @click.stop="$router.replace(`/@${auth.user.username}`)"
-            >
-              <Lang>
-                <template #zh>我的</template>
-                <template #en>Mine</template>
-              </Lang>
-            </button>
-
-            <button
-              v-if="auth.user"
               class="hover:underline"
               @click.stop="$router.replace('/settings')"
             >
@@ -107,36 +83,6 @@ async function logoutAfterConfirming() {
               <Lang>
                 <template #zh>中文/English</template>
                 <template #en>English/中文</template>
-              </Lang>
-            </button>
-
-            <div class="w-full border-t border-black dark:border-white"></div>
-
-            <button v-if="!auth.user" @click.stop="$router.replace('/login')">
-              <Lang>
-                <template #zh>登录</template>
-                <template #en>Login</template>
-              </Lang>
-            </button>
-
-            <button
-              v-if="!auth.user"
-              @click.stop="$router.replace('/register')"
-            >
-              <Lang>
-                <template #zh>注册</template>
-                <template #en>Register</template>
-              </Lang>
-            </button>
-
-            <div v-if="auth.user" class="whitespace-pre font-bold">
-              {{ auth.user.name }}
-            </div>
-
-            <button v-if="auth.user" @click.stop="logoutAfterConfirming()">
-              <Lang class="whitespace-pre">
-                <template #zh>退出</template>
-                <template #en>Logout</template>
               </Lang>
             </button>
           </div>

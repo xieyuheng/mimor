@@ -1,3 +1,3 @@
-remove models/ -- keep theme
-remove clients/
+remove unused components
+remove unused dependencies
 new page-layout/

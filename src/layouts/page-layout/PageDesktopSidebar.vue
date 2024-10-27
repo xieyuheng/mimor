@@ -2,12 +2,10 @@
 import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
-import { useGlobalAuth } from '../../models/auth'
 import { useGlobalTheme } from '../../models/theme'
 
 const lang = useGlobalLang()
 const theme = useGlobalTheme()
-const auth = useGlobalAuth()
 
 const isFileSystemAccessSupported =
   typeof window.showOpenFilePicker === 'function'
@@ -22,28 +20,6 @@ const isFileSystemAccessSupported =
         <Lang>
           <template #zh>首页</template>
           <template #en>Home</template>
-        </Lang>
-      </Hyperlink>
-
-      <Hyperlink
-        v-if="auth.user"
-        :href="`/@${auth.user.username}`"
-        class="hover:underline"
-      >
-        <Lang>
-          <template #zh>我的</template>
-          <template #en>Mine</template>
-        </Lang>
-      </Hyperlink>
-
-      <Hyperlink
-        v-if="isFileSystemAccessSupported"
-        href="/editor"
-        class="hover:underline"
-      >
-        <Lang>
-          <template #zh>编辑器</template>
-          <template #en>Editor</template>
         </Lang>
       </Hyperlink>
 
