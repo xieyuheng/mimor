@@ -4,7 +4,6 @@ import MimorLoaded from './MimorLoaded.vue'
 import MimorLoading from './MimorLoading.vue'
 import MimorMeta from './MimorMeta.vue'
 import { State } from './State'
-import { StatisticsReport } from './StatisticsReport'
 import { stateLoad } from './stateLoad'
 import { stateReload } from './stateReload'
 
@@ -14,7 +13,6 @@ const props = defineProps<{
   withMetaThemeColor?: boolean
   reducedMotion?: boolean
 }>()
-
 
 const state = ref<State | undefined>(undefined)
 
@@ -30,10 +28,7 @@ watchEffect(async () => {
 <template>
   <div>
     <MimorMeta v-if="state" :state />
-    <MimorLoaded
-      v-if="state"
-      :state
-    />
+    <MimorLoaded v-if="state" :state />
     <MimorLoading v-else :options="{ src }" />
   </div>
 </template>

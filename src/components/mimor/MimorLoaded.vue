@@ -1,18 +1,15 @@
 <script setup lang="ts">
 import { useEventListener } from '@vueuse/core'
 import { ref, watch } from 'vue'
-import Init from '../utils/Init.vue'
 import Scope from '../utils/Scope.vue'
 import MimorKindEditor from './MimorKindEditor.vue'
 import MimorKindError from './MimorKindError.vue'
 import MimorKindProgram from './MimorKindProgram.vue'
 import MimorKindProgramEmpty from './MimorKindProgramEmpty.vue'
 import { State } from './State'
-import { StatisticsReport } from './StatisticsReport'
 import { programCurrentElement } from './programCurrentElement'
 import { programPointer } from './programPointer'
 import { stateWatch } from './stateWatch'
-import { statisticsReportCreate } from './statisticsReportCreate'
 
 const props = defineProps<{ state: State }>()
 
@@ -49,8 +46,6 @@ watch(
   },
 )
 
-
-
 useEventListener(document, 'fullscreenchange', () => {
   if (document.fullscreenElement) {
     props.state.isFullscreen = true
@@ -69,14 +64,8 @@ useEventListener(document, 'fullscreenchange', () => {
         props.state.theme.name === 'white',
     }"
   >
-
-
     <template v-if="state.kind === 'Editor'">
-      <MimorKindEditor
-        class="h-full"
-        :class="[state.theme.bg(300)]"
-        :state
-      />
+      <MimorKindEditor class="h-full" :class="[state.theme.bg(300)]" :state />
     </template>
 
     <template v-else-if="state.kind === 'Error' && state.error">

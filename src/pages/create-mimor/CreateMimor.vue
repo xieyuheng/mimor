@@ -4,8 +4,6 @@ import { useRouter } from 'vue-router'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 import CreateMimorPreview from './CreateMimorPreview.vue'
 import CreateMimorTextarea from './CreateMimorTextarea.vue'
-import CreateMimorToolbar from './CreateMimorToolbar.vue'
-import { State } from './State'
 import { editorCreate } from './Editor'
 
 const state = reactive({
@@ -17,7 +15,6 @@ const report = reactive({ errorMessage: '' })
 
 <template>
   <PageLayout>
-
     <div class="flex h-full w-full flex-col p-3 sm:p-6">
       <form class="flex h-full flex-col overflow-y-auto">
         <div class="flex flex-col sm:h-full sm:flex-row">
