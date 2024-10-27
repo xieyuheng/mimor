@@ -6,7 +6,6 @@ import { programCreate } from './programCreate'
 export function stateCreate(options: {
   src: string
   withMetaThemeColor?: boolean
-  isEditable?: boolean
   text: string
   isTextGiven?: boolean
   isWebComponent?: boolean
@@ -15,7 +14,6 @@ export function stateCreate(options: {
   const {
     src,
     withMetaThemeColor,
-    isEditable,
     text,
     isTextGiven,
     isWebComponent,
@@ -34,7 +32,6 @@ export function stateCreate(options: {
     metadata,
     withMetaThemeColor,
     isFullscreen: false,
-    isEditable,
     isWebComponent,
     reducedMotion,
   }

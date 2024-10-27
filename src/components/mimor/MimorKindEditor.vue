@@ -14,6 +14,6 @@ defineProps<{
     <MimorHeadProgram v-if="state.program" :state :program="state.program" />
     <MimorHeadError v-if="state.error" :state />
 
-    <MimorEditor :state @update="$emit('update')" />
+    <MimorEditor :state />
   </div>
 </template>

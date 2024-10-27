@@ -5,7 +5,6 @@ export interface StateOptions {
   src: string
   text?: string
   withMetaThemeColor?: boolean
-  isEditable?: boolean
   isWebComponent?: boolean
 }
 

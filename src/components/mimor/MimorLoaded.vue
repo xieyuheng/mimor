@@ -16,12 +16,6 @@ import { statisticsReportCreate } from './statisticsReportCreate'
 
 const props = defineProps<{ state: State }>()
 
-const emit = defineEmits<{
-  loaded: []
-  update: [value: State]
-  finish: [value: { statistics: StatisticsReport }]
-}>()
-
 const rootElement = ref<HTMLElement | undefined>(undefined)
 
 stateWatch(props.state)
@@ -55,16 +49,7 @@ watch(
   },
 )
 
-watch(
-  () => props.state.isFinished,
-  (value) => {
-    if (props.state.program && value) {
-      emit('finish', {
-        statistics: statisticsReportCreate(props.state.program.statistics),
-      })
-    }
-  },
-)
+
 
 useEventListener(document, 'fullscreenchange', () => {
   if (document.fullscreenElement) {
@@ -84,22 +69,13 @@ useEventListener(document, 'fullscreenchange', () => {
         props.state.theme.name === 'white',
     }"
   >
-    <Init
-      :action="
-        () => {
-          if (!props.state.isTextGiven) {
-            $emit('loaded')
-          }
-        }
-      "
-    />
+
 
     <template v-if="state.kind === 'Editor'">
       <MimorKindEditor
         class="h-full"
         :class="[state.theme.bg(300)]"
         :state
-        @update="$emit('update', state)"
       />
     </template>
 
@@ -131,7 +107,6 @@ useEventListener(document, 'fullscreenchange', () => {
           :state
           :program="state.program"
           :element="scope.element"
-          @finish="(value) => $emit('finish', value)"
         />
       </Scope>
     </template>

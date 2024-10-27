@@ -12,15 +12,9 @@ const props = defineProps<{
   src: string
   text?: string
   withMetaThemeColor?: boolean
-  isEditable?: boolean
   reducedMotion?: boolean
 }>()
 
-defineEmits<{
-  loaded: [value: State]
-  update: [value: State]
-  finish: [value: { statistics: StatisticsReport }]
-}>()
 
 const state = ref<State | undefined>(undefined)
 
@@ -39,10 +33,7 @@ watchEffect(async () => {
     <MimorLoaded
       v-if="state"
       :state
-      @update="$emit('update', state)"
-      @loaded="$emit('loaded', state)"
-      @finish="(value) => $emit('finish', value)"
     />
-    <MimorLoading v-else :options="{ src, isEditable }" />
+    <MimorLoading v-else :options="{ src }" />
   </div>
 </template>
