@@ -12,16 +12,11 @@ import Register from './register/Register.vue'
 import Settings from './settings/Settings.vue'
 
 export const routes: Array<RouteRecordRaw> = [
-  { path: '/', component: Home },
   { path: '/play', component: Play },
-  { path: '/register', component: Register },
-  { path: '/login', component: Login },
   { path: '/mimors', component: MimorEntrance },
   { path: '/mimors/', component: MimorEntrance },
   { path: '/mimors/:src(.*)', component: Mimor },
   { path: '/create', component: CreateMimor },
-  { path: '/editor', component: Editor },
-  { path: '/@:username', component: Author },
   { path: '/settings', component: Settings },
   { path: '/:path(.*)', component: PageNotFound },
 ]
