@@ -3,8 +3,8 @@ import PageLogo from './PageLogo.vue'
 </script>
 
 <template>
-  <div class="w-full">
-    <div class="flex w-full justify-between px-3 py-2">
+  <div class="flex w-full items-baseline justify-between">
+    <div class="flex">
       <PageLogo class="text-2xl" />
     </div>
   </div>
