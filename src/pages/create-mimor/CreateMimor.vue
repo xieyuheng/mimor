@@ -19,13 +19,13 @@ const report = reactive({ errorMessage: '' })
       <form class="flex h-full flex-col overflow-y-auto">
         <div class="flex flex-col sm:h-full sm:flex-row">
           <div
-            class="flex h-full min-h-[24rem] w-full flex-col border border-black dark:border-white sm:overflow-auto"
+            class="flex h-full min-h-[24rem] w-full flex-col border border-black sm:overflow-auto dark:border-white"
           >
             <CreateMimorTextarea :state />
           </div>
 
           <div
-            class="flex min-h-full w-full flex-col border-b border-l border-r border-black dark:border-white sm:overflow-auto sm:border-y sm:border-l-0"
+            class="flex min-h-full w-full flex-col border-b border-l border-r border-black sm:overflow-auto sm:border-y sm:border-l-0 dark:border-white"
           >
             <CreateMimorPreview class="h-full" :state />
           </div>

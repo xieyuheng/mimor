@@ -13,7 +13,7 @@ defineProps<{
   <div>
     <PageMobileHead
       v-if="!noMobileHead"
-      class="fixed left-0 top-0 z-10 border-b border-stone-300 bg-white dark:border-stone-600 dark:bg-stone-900 dark:text-white sm:hidden"
+      class="fixed left-0 top-0 z-10 border-b border-stone-300 bg-white sm:hidden dark:border-stone-600 dark:bg-stone-900 dark:text-white"
     />
 
     <div class="fixed left-0 top-0 z-10 hidden w-full sm:block">
@@ -21,13 +21,13 @@ defineProps<{
         class="flex h-16 items-center border-b border-stone-300 dark:border-stone-600"
       >
         <PageDesktopHead
-          class="bg-white px-3 shadow-sm dark:bg-stone-900 dark:text-white sm:px-6"
+          class="bg-white px-3 shadow-sm sm:px-6 dark:bg-stone-900 dark:text-white"
         />
       </div>
     </div>
 
     <div
-      class="h-screen-dynamic flex pb-14 dark:bg-stone-900 dark:text-white sm:pb-0 sm:pt-16"
+      class="h-screen-dynamic flex pb-14 sm:pb-0 sm:pt-16 dark:bg-stone-900 dark:text-white"
       :class="{
         'pt-12': !noMobileHead,
       }"
@@ -44,7 +44,7 @@ defineProps<{
     </div>
 
     <div
-      class="fixed bottom-0 right-0 z-10 w-full border-t border-stone-300 bg-white px-3 dark:border-stone-600 dark:bg-stone-900 dark:text-white sm:hidden"
+      class="fixed bottom-0 right-0 z-10 w-full border-t border-stone-300 bg-white px-3 sm:hidden dark:border-stone-600 dark:bg-stone-900 dark:text-white"
     >
       <PageMobileFoot />
     </div>

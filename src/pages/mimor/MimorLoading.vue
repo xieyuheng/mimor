@@ -8,7 +8,7 @@ defineProps<{ options: StateOptions }>()
 
 <template>
   <PageLayout>
-    <div class="p-3 text-xl text-stone-500 dark:text-stone-300 sm:p-6">
+    <div class="p-3 text-xl text-stone-500 sm:p-6 dark:text-stone-300">
       <Lang>
         <template #zh>谜墨加载中⋯⋯</template>
         <template #en>Loading mimor ...</template>
