@@ -2,8 +2,6 @@
 @import './height.css' layer(base);
 @import './scrollbar-base.css' layer(base);
 @import './scrollbar.css' layer(utilities);
-@import './animate-jump.css' layer(utilities);
-@import './animate-shake.css' layer(utilities);
 
 .text-balance {
   text-wrap: balance;
