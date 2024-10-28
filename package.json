@@ -5,6 +5,7 @@
     "lib",
     "src"
   ],
+  "typings": "./lib/index.d.ts",
   "main": "./lib/index.umd.js",
   "module": "./lib/index.mjs",
   "exports": {
