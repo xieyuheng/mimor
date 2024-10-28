@@ -14,13 +14,13 @@ const state = reactive({ editor: editorCreate() })
       <form class="flex h-full flex-col overflow-y-auto">
         <div class="flex flex-col sm:h-full sm:flex-row">
           <div
-            class="flex h-full min-h-[24rem] w-full flex-col border border-black sm:overflow-auto dark:border-white"
+            class="flex h-full min-h-[24rem] w-full flex-col border border-black sm:min-h-[1rem] sm:overflow-auto dark:border-white"
           >
             <PlaygorundTextarea :state />
           </div>
 
           <div
-            class="flex min-h-full w-full flex-col border-b border-l border-r border-black sm:overflow-auto sm:border-y sm:border-l-0 dark:border-white"
+            class="flex min-h-[24rem] w-full flex-col border-b border-l border-r border-black sm:min-h-[1rem] sm:overflow-auto sm:border-y sm:border-l-0 dark:border-white"
           >
             <PlaygorundPreview class="h-full" :state />
           </div>
