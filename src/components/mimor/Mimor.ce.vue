@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { reactive, ref, watchEffect } from 'vue'
+import { reactive, ref, watch, watchEffect } from 'vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import { useGlobalTheme } from '../../models/theme'
 import MimorLoaded from './MimorLoaded.vue'
@@ -18,10 +18,26 @@ const props = defineProps<{
   theme?: { name: string }
 }>()
 
-const state = ref<State | undefined>(undefined)
+const state = ref<State>()
+const rootElement = ref<HTMLElement>()
 
 const lang = useGlobalLang()
 const theme = useGlobalTheme()
+
+watchEffect(() => {
+  rootElement.value?.classList.add(theme.name)
+})
+
+watch(
+  () => theme.name,
+  (value, oldValue) => {
+    if (oldValue) {
+      rootElement.value?.classList.remove(oldValue)
+    }
+
+    rootElement.value?.classList.add(value)
+  },
+)
 
 watchEffect(async () => {
   if (props.lang?.tag) lang.tag = props.lang.tag
@@ -36,7 +52,7 @@ watchEffect(async () => {
 </script>
 
 <template>
-  <div>
+  <div ref="rootElement">
     <MimorMeta v-if="state" :state />
     <MimorLoaded v-if="state" :state />
     <MimorLoading v-else :options="{ src }" />
