@@ -4,7 +4,7 @@
 | [Manual](https://readonly.link/manuals/https://mimor.app/contents/manual/en.json)
 | [手册](https://readonly.link/manuals/https://mimor.app/contents/manual/zh.json) ]
 
-Making memory a choice.
+> Making memory a choice.
 
 ## Development
 

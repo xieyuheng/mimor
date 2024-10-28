@@ -1,5 +1,4 @@
-import { z, type ZodType } from 'zod'
-import { Trace, TraceSchema } from './Trace'
+import { Trace } from './Trace'
 
 // `StatisticsReport` must be accumulative to keep backward compatibility.
 
@@ -10,11 +9,3 @@ export type StatisticsReport = {
   trace: Trace
   forgettingRate: number
 }
-
-export const StatisticsReportSchema: ZodType<StatisticsReport> = z.object({
-  startedAt: z.optional(z.number()),
-  endedAt: z.optional(z.number()),
-  duration: z.optional(z.number()),
-  trace: TraceSchema,
-  forgettingRate: z.number(),
-})
