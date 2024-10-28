@@ -5,5 +5,14 @@ import { defineConfig, splitVendorChunkPlugin } from 'vite'
 export default defineConfig({
   server: { host: '0.0.0.0' },
   build: { sourcemap: true },
-  plugins: [vue(), splitVendorChunkPlugin()],
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => tag.startsWith('x-'),
+        },
+      },
+    }),
+    splitVendorChunkPlugin(),
+  ],
 })

@@ -1,4 +1,4 @@
-x-mimor -- be able to config lang and dark/light
+x-mimor -- fix the use of theme
 
 new page-layout/
 rename create-mimor/ to playgorund

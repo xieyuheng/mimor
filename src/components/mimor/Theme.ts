@@ -51,6 +51,7 @@ export class Theme {
   }
 
   text(level: number): string {
+    console.log(`text-${this.name}-${this.level(level)}`)
     return this.name === 'white'
       ? 'dark:text-white text-black'
       : `text-${this.name}-${this.level(level)}`

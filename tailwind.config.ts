@@ -3,7 +3,7 @@ import colors from 'tailwindcss/colors'
 
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-  darkMode: 'class',
+  darkMode: 'selector',
   safelist: [
     {
       pattern:

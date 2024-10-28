@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { reactive, ref, watchEffect } from 'vue'
+import { useGlobalLang } from '../../components/lang/useGlobalLang'
+import { useGlobalTheme } from '../../models/theme'
 import MimorLoaded from './MimorLoaded.vue'
 import MimorLoading from './MimorLoading.vue'
 import MimorMeta from './MimorMeta.vue'
@@ -12,11 +14,19 @@ const props = defineProps<{
   text?: string
   withMetaThemeColor?: boolean
   reducedMotion?: boolean
+  lang?: { tag: string }
+  theme?: { name: string }
 }>()
 
 const state = ref<State | undefined>(undefined)
 
+const lang = useGlobalLang()
+const theme = useGlobalTheme()
+
 watchEffect(async () => {
+  if (props.lang?.tag) lang.tag = props.lang.tag
+  if (props.theme?.name) theme.name = props.theme.name
+
   if (!state.value) {
     state.value = reactive(await stateLoad(props))
   } else {
