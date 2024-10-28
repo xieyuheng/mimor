@@ -40,13 +40,12 @@ onMounted(() => {
 watch(
   () => props.themeName,
   (value, oldValue) => {
-    theme.name = value
-
     if (oldValue) {
       rootElement.value?.classList.remove(oldValue)
     }
 
     if (value) {
+      theme.name = value
       rootElement.value?.classList.add(value)
     }
   },
