@@ -33,7 +33,7 @@ async function submit(event: Event) {
 
   <PageLayout>
     <div
-      class="flex h-full w-full flex-col items-center sm:pl-10 sm:pr-16 md:pr-24 lg:pr-36"
+      class="flex h-full w-full flex-col items-center sm:px-16 md:px-24 lg:px-36"
     >
       <div class="flex h-full w-full flex-col justify-center p-3">
         <form @submit.prevent="submit">
