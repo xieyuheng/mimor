@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { CheckIcon, PlayIcon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { computed } from 'vue'
 import Lang from '../../components/lang/Lang.vue'
 import { formatDuration, formatTime } from '../../utils/formatDate'
@@ -74,35 +75,29 @@ const statistics = computed(() =>
       </template>
     </Lang>
 
-    <Lang class="flex items-baseline whitespace-pre">
-      <template #zh>
-        <span class="whitespace-pre font-bold">足迹：</span>
-        <div class="flex flex-wrap text-base">
-          <div
-            v-for="(entry, index) of statistics.trace"
-            :key="index"
-            class="pr-1"
-          >
-            <div v-if="entry.kind === 'Start'">始</div>
-            <div v-if="entry.kind === 'Forgotten'">忘</div>
-            <div v-if="entry.kind === 'Remembered'">记</div>
-          </div>
-        </div>
-      </template>
-      <template #en>
-        <span class="whitespace-pre pr-1.5 font-bold">Trace: </span>
-        <div class="flex flex-wrap text-base">
-          <div
-            v-for="(entry, index) of statistics.trace"
-            :key="index"
-            class="pr-1"
-          >
-            <div v-if="entry.kind === 'Start'">S</div>
-            <div v-if="entry.kind === 'Forgotten'">F</div>
-            <div v-if="entry.kind === 'Remembered'">R</div>
-          </div>
-        </div>
-      </template>
-    </Lang>
+    <div class="flex items-center">
+      <Lang>
+        <template #zh>
+          <span class="whitespace-pre font-bold">足迹：</span>
+        </template>
+        <template #en>
+          <span class="whitespace-pre pr-1.5 font-bold">Trace: </span>
+        </template>
+      </Lang>
+
+      <span class="flex flex-wrap">
+        <span v-for="(entry, index) of statistics.trace" :key="index">
+          <span v-if="entry.kind === 'Start'"
+            ><PlayIcon class="h-4 w-4"
+          /></span>
+          <span v-if="entry.kind === 'Forgotten'"
+            ><XMarkIcon class="h-4 w-4"
+          /></span>
+          <span v-if="entry.kind === 'Remembered'"
+            ><CheckIcon class="h-4 w-4"
+          /></span>
+        </span>
+      </span>
+    </div>
   </div>
 </template>
