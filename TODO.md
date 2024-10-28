@@ -1,4 +1,3 @@
-rename project to mimor -- old mimor to mimor-app
 Mimor.vue -- remove isWebComponent
 Mimor.vue -- config meta
 merge Mimor.ce.vue with Mimor.vue
