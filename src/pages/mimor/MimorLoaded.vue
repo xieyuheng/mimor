@@ -16,8 +16,8 @@ const theme = useGlobalTheme()
   <x-mimor
     class="h-screen-dynamic w-screen"
     :src="state.src"
-    :withMetaThemeColor="true"
-    :langTag="lang.tag"
-    :themeName="theme.name"
+    :with-meta-theme-color="true"
+    :lang-tag="lang.tag"
+    :theme-name="theme.name"
   />
 </template>
