@@ -1,16 +1,8 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
 import Lang from '../../components/lang/Lang.vue'
-import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import TransitionPop from '../../components/transitions/TransitionPop.vue'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
 import Popup from '../../components/utils/Popup.vue'
-
-const lang = useGlobalLang()
-const router = useRouter()
-
-const isFileSystemAccessSupported =
-  typeof window.showOpenFilePicker === 'function'
 </script>
 
 <template>

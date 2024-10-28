@@ -6,9 +6,6 @@ import { useGlobalTheme } from '../../models/theme'
 
 const lang = useGlobalLang()
 const theme = useGlobalTheme()
-
-const isFileSystemAccessSupported =
-  typeof window.showOpenFilePicker === 'function'
 </script>
 
 <template>
