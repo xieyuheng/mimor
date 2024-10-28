@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  plugins: [vue()],
   build: {
     sourcemap: true,
     outDir: 'lib',
@@ -12,5 +13,4 @@ export default defineConfig({
       fileName: 'index',
     },
   },
-  plugins: [vue()],
 })
