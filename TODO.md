@@ -1,5 +1,3 @@
-Mimor.vue -- config meta
-merge Mimor.ce.vue with Mimor.vue
 rename create-mimor/ to playgorund
 new page-layout/
 remove unused dependencies
