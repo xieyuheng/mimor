@@ -15,6 +15,5 @@ export type State = {
   error?: Error
   isFullscreen: boolean
   isFinished?: boolean
-  isWebComponent?: boolean
   reducedMotion?: boolean
 }

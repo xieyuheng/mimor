@@ -2,7 +2,8 @@
   "name": "mimor",
   "version": "0.0.23",
   "files": [
-    "lib"
+    "lib",
+    "src"
   ],
   "main": "./lib/index.umd.js",
   "module": "./lib/index.mjs",

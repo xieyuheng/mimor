@@ -7,7 +7,6 @@ import {
   PlayIcon,
 } from '@heroicons/vue/24/outline'
 import Lang from '../../components/lang/Lang.vue'
-import { currentOrigin } from '../../utils/currentOrigin'
 import { useGlobalLang } from '../lang/useGlobalLang'
 import { State } from './State'
 import { stateEditorOpen } from './stateEditorOpen'
@@ -18,9 +17,7 @@ const props = defineProps<{
 
 const lang = useGlobalLang()
 
-const origin = props.state.isWebComponent
-  ? 'https://mimor.app'
-  : currentOrigin()
+const origin = 'https://mimor.app'
 
 function fullscreenSupported() {
   return document.fullscreenEnabled

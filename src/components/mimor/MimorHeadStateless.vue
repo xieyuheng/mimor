@@ -1,15 +1,12 @@
 <script setup lang="ts">
 import Lang from '../../components/lang/Lang.vue'
-import { currentOrigin } from '../../utils/currentOrigin'
 import { useGlobalLang } from '../lang/useGlobalLang'
 import { StateOptions } from './stateLoad'
 
 const props = defineProps<{ options: StateOptions }>()
 
 const lang = useGlobalLang()
-const origin = props.options.isWebComponent
-  ? 'https://mimor.app'
-  : currentOrigin()
+const origin = 'https://mimor.app'
 </script>
 
 <template>

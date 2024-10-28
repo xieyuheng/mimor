@@ -16,9 +16,9 @@ const state = ref<State | undefined>(undefined)
 
 watchEffect(async () => {
   if (!state.value) {
-    state.value = reactive(await stateLoad({ ...props, isWebComponent: true }))
+    state.value = reactive(await stateLoad({ ...props }))
   } else {
-    await stateReload(state.value, { ...props, isWebComponent: true })
+    await stateReload(state.value, { ...props })
   }
 })
 </script>

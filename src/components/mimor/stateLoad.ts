@@ -5,7 +5,6 @@ export interface StateOptions {
   src: string
   text?: string
   withMetaThemeColor?: boolean
-  isWebComponent?: boolean
 }
 
 export async function stateLoad(options: StateOptions): Promise<State> {

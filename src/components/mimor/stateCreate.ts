@@ -8,17 +8,9 @@ export function stateCreate(options: {
   withMetaThemeColor?: boolean
   text: string
   isTextGiven?: boolean
-  isWebComponent?: boolean
   reducedMotion?: boolean
 }): State {
-  const {
-    src,
-    withMetaThemeColor,
-    text,
-    isTextGiven,
-    isWebComponent,
-    reducedMotion,
-  } = options
+  const { src, withMetaThemeColor, text, isTextGiven, reducedMotion } = options
 
   const theme = new Theme('white')
   const metadata = { keywords: [] }
@@ -32,7 +24,6 @@ export function stateCreate(options: {
     metadata,
     withMetaThemeColor,
     isFullscreen: false,
-    isWebComponent,
     reducedMotion,
   }
 

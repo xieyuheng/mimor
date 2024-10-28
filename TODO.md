@@ -1,4 +1,3 @@
-Mimor.vue -- remove isWebComponent
 Mimor.vue -- config meta
 merge Mimor.ce.vue with Mimor.vue
 rename create-mimor/ to playgorund
