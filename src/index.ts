@@ -9,3 +9,5 @@ export const Mimor = defineCustomElement(MimorComponent, {
     app.use(createHead())
   },
 })
+
+customElements.define('x-mimor', Mimor)
