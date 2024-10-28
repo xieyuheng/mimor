@@ -1,16 +1,11 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
-import { useRouter } from 'vue-router'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
-import CreateMimorPreview from './CreateMimorPreview.vue'
-import CreateMimorTextarea from './CreateMimorTextarea.vue'
 import { editorCreate } from './Editor'
+import PlaygorundPreview from './PlaygorundPreview.vue'
+import PlaygorundTextarea from './PlaygorundTextarea.vue'
 
-const state = reactive({
-  editor: editorCreate(),
-})
-const router = useRouter()
-const report = reactive({ errorMessage: '' })
+const state = reactive({ editor: editorCreate() })
 </script>
 
 <template>
@@ -21,13 +16,13 @@ const report = reactive({ errorMessage: '' })
           <div
             class="flex h-full min-h-[24rem] w-full flex-col border border-black sm:overflow-auto dark:border-white"
           >
-            <CreateMimorTextarea :state />
+            <PlaygorundTextarea :state />
           </div>
 
           <div
             class="flex min-h-full w-full flex-col border-b border-l border-r border-black sm:overflow-auto sm:border-y sm:border-l-0 dark:border-white"
           >
-            <CreateMimorPreview class="h-full" :state />
+            <PlaygorundPreview class="h-full" :state />
           </div>
         </div>
       </form>
