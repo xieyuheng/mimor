@@ -1,15 +1,12 @@
 <script setup lang="ts">
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
-import { useRouter } from 'vue-router'
 import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import TransitionRotateInSlideOut from '../../components/transitions/TransitionRotateInSlideOut.vue'
 import Popup from '../../components/utils/Popup.vue'
-import RouteSyncWithQuery from '../../components/utils/RouteSyncWithQuery.vue'
 import { useGlobalTheme } from '../../models/theme'
 import PageLogo from './PageLogo.vue'
 
-const router = useRouter()
 const lang = useGlobalLang()
 const theme = useGlobalTheme()
 </script>
@@ -28,8 +25,6 @@ const theme = useGlobalTheme()
           v-show="popup.open"
           class="h-screen-dynamic fixed left-0 top-0 z-40 flex w-full flex-col justify-between overflow-auto bg-white p-3 dark:bg-stone-900 dark:text-white"
         >
-          <RouteSyncWithQuery :state="popup" name="mobile-menu" />
-
           <div class="flex justify-between">
             <PageLogo class="font-bold" />
 
