@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { reactive, ref, watch, watchEffect } from 'vue'
+import { onMounted, reactive, ref, watch, watchEffect } from 'vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import MimorLoaded from './MimorLoaded.vue'
 import MimorLoading from './MimorLoading.vue'
@@ -13,8 +13,8 @@ const props = defineProps<{
   text?: string
   withMetaThemeColor?: boolean
   reducedMotion?: boolean
-  lang?: { tag: string }
-  theme?: { name: string }
+  langTag?: string
+  themeName?: string
 }>()
 
 const state = ref<State>()
@@ -23,25 +23,31 @@ const rootElement = ref<HTMLElement>()
 const lang = useGlobalLang()
 
 watchEffect(() => {
-  if (props.theme?.name) {
-    rootElement.value?.classList.add(props.theme?.name)
+  if (props.langTag) {
+    lang.tag = props.langTag
+  }
+})
+
+onMounted(() => {
+  if (props.themeName) {
+    rootElement.value?.classList.add(props.themeName)
   }
 })
 
 watch(
-  () => props.theme?.name,
+  () => props.themeName,
   (value, oldValue) => {
     if (oldValue) {
       rootElement.value?.classList.remove(oldValue)
     }
 
-    rootElement.value?.classList.add(value)
+    if (value) {
+      rootElement.value?.classList.add(value)
+    }
   },
 )
 
 watchEffect(async () => {
-  if (props.lang?.tag) lang.tag = props.lang.tag
-
   if (!state.value) {
     state.value = reactive(await stateLoad(props))
   } else {

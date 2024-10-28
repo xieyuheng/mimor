@@ -17,7 +17,7 @@ const theme = useGlobalTheme()
     class="h-screen-dynamic w-screen"
     :src="state.src"
     :withMetaThemeColor="true"
-    :lang="lang"
-    :theme="theme"
+    :langTag="lang.tag"
+    :themeName="theme.name"
   />
 </template>

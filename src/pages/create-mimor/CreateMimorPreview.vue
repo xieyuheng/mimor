@@ -16,7 +16,7 @@ defineProps<{ state: State }>()
     :reducedMotion="true"
     :src="`data:text/plain;base64,${Base64.encode(state.editor.content)}`"
     :text="state.editor.content"
-    :lang="lang"
-    :theme="theme"
+    :langTag="lang.tag"
+    :themeName="theme.name"
   />
 </template>
