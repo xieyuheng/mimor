@@ -2,6 +2,8 @@
 defineProps<{
   name: string
 }>()
+
+const model = defineModel()
 </script>
 
 <template>
@@ -15,7 +17,7 @@ defineProps<{
         class="w-full p-3 font-bold disabled:bg-stone-100 dark:bg-stone-900 dark:text-white dark:disabled:bg-stone-700"
         :id="name"
         :name="name"
-        v-bind="$attrs"
+        v-model="model"
       />
 
       <slot name="input-end" />

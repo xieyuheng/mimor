@@ -2,26 +2,18 @@
 import { PlayIcon, QuestionMarkCircleIcon } from '@heroicons/vue/24/outline'
 import { Head } from '@vueuse/head'
 import { useRouter } from 'vue-router'
-import { formSubmit, useForm } from '../../components/form'
 import FormInput from '../../components/form/FormInput.vue'
 import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import PageLayout from '../../layouts/page-layout/PageLayout.vue'
 
-const form = useForm({
-  url: '',
-})
-
+const form = { url: '' }
 const lang = useGlobalLang()
-
+const router = useRouter()
 const origin = window.location.origin
 
-const router = useRouter()
-
-async function submit(event: Event) {
-  formSubmit(form, event, async ({ url }) => {
-    router.push({ path: `/mimors/${url}` })
-  })
+async function submit() {
+  router.push({ path: `/mimors/${form.url}` })
 }
 </script>
 
@@ -37,7 +29,7 @@ async function submit(event: Event) {
     >
       <div class="flex h-full w-full flex-col justify-center p-3">
         <form @submit.prevent="submit">
-          <FormInput name="url" type="url" :form="form">
+          <FormInput name="url" type="url" v-model="form.url">
             <template #label>
               <div class="flex items-end justify-between" title="Docs">
                 <Lang class="text-3xl">
@@ -65,7 +57,7 @@ async function submit(event: Event) {
           </FormInput>
         </form>
 
-        <div class="py-16"></div>
+        <div class="py-6"></div>
       </div>
     </div>
   </PageLayout>
