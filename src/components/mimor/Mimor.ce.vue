@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted, reactive, ref, watch, watchEffect } from 'vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
+import { useGlobalTheme } from '../../models/theme'
 import MimorLoaded from './MimorLoaded.vue'
 import MimorLoading from './MimorLoading.vue'
 import MimorMeta from './MimorMeta.vue'
@@ -21,6 +22,7 @@ const state = ref<State>()
 const rootElement = ref<HTMLElement>()
 
 const lang = useGlobalLang()
+const theme = useGlobalTheme()
 
 watchEffect(() => {
   if (props.langTag) {
@@ -30,6 +32,7 @@ watchEffect(() => {
 
 onMounted(() => {
   if (props.themeName) {
+    theme.name = props.themeName
     rootElement.value?.classList.add(props.themeName)
   }
 })
@@ -37,6 +40,8 @@ onMounted(() => {
 watch(
   () => props.themeName,
   (value, oldValue) => {
+    theme.name = value
+
     if (oldValue) {
       rootElement.value?.classList.remove(oldValue)
     }
