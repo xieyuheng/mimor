@@ -31,8 +31,8 @@ watch(
 
 <template>
   <div
-    class="flex h-full w-full flex-col justify-between"
-    :class="[state.theme.bg(300), state.theme.text(100)]"
+    class="flex h-full w-full flex-col justify-between text-black dark:text-white"
+    :class="[state.theme.bg(300)]"
   >
     <MimorHeadProgram :state :program />
 
