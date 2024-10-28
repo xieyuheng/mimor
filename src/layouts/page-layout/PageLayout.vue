@@ -18,7 +18,7 @@ import PageHead from './PageHead.vue'
         <slot />
       </div>
 
-      <div class="flex justify-end px-6 pb-4">
+      <div class="flex justify-end px-3 pb-4 sm:px-6">
         <PageFoot />
       </div>
     </div>
