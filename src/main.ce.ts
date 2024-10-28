@@ -1,6 +1,6 @@
 import { createHead } from '@vueuse/head'
 import { defineCustomElement } from 'vue'
-import Mimor from './components/mimor/Mimor.vue'
+import Mimor from './components/mimor/Mimor.ce.vue'
 
 customElements.define(
   'x-mimor',

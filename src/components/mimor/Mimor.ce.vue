@@ -32,3 +32,7 @@ watchEffect(async () => {
     <MimorLoading v-else :options="{ src }" />
   </div>
 </template>
+
+<style>
+@import url('../../styles/index.css');
+</style>
