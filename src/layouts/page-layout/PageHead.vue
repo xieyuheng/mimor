@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
+import Hyperlink from '../../components/utils/Hyperlink.vue'
 import { useGlobalTheme } from '../../models/theme'
 import PageLogo from './PageLogo.vue'
 
@@ -15,6 +16,13 @@ const theme = useGlobalTheme()
     </div>
 
     <div class="flex space-x-3 text-lg">
+      <Hyperlink
+        href="/mimors"
+        class="flex items-center whitespace-nowrap hover:underline"
+      >
+        连接
+      </Hyperlink>
+
       <button
         class="flex items-center whitespace-nowrap hover:underline"
         @click="

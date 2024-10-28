@@ -1,1 +1,1 @@
-link to mimor-entrance/
+fix mimor-entrance/
