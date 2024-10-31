@@ -1,6 +1,6 @@
 # Mimor Web Component
 
-[ [Webwite](https://mimor.app)
+[ [Website](https://mimor.app)
 | [Manual](https://readonly.link/manuals/https://mimor.app/contents/manual/en.json)
 | [手册](https://readonly.link/manuals/https://mimor.app/contents/manual/zh.json) ]
 
