@@ -1,6 +1,6 @@
 # Mimor Web Component
 
-[ [Website](https://mimor.app)
+[ [Website](https://mimor.xieyuheng.com)
 | [Manual](https://readonly.link/manuals/https://mimor.app/contents/manual/en.json)
 | [手册](https://readonly.link/manuals/https://mimor.app/contents/manual/zh.json) ]
 
