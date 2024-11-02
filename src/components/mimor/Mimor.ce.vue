@@ -4,7 +4,6 @@ import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import { useGlobalTheme } from '../../models/theme'
 import MimorLoaded from './MimorLoaded.vue'
 import MimorLoading from './MimorLoading.vue'
-import MimorMeta from './MimorMeta.vue'
 import { State } from './State'
 import { stateLoad } from './stateLoad'
 import { stateReload } from './stateReload'
@@ -62,7 +61,6 @@ watchEffect(async () => {
 
 <template>
   <div ref="rootElement">
-    <MimorMeta v-if="state" :state />
     <MimorLoaded v-if="state" :state />
     <MimorLoading v-else :options="{ src }" />
   </div>
