@@ -6,7 +6,7 @@ const lang = useGlobalLang()
 </script>
 
 <template>
-  <Hyperlink href="/" class="whitespace-pre font-bold">
+  <Hyperlink href="/" class="whitespace-pre">
     <div>{{ lang.isZh() ? '谜墨' : 'Mimor' }}</div>
   </Hyperlink>
 </template>
