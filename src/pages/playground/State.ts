@@ -1,11 +1,4 @@
-export type State = {
-  content: string
-  isFocused: boolean
-}
-
-export function editorCreate(): State {
-  return {
-    content: '',
-    isFocused: false,
-  }
+export class State {
+  content = ''
+  isFocused = false
 }

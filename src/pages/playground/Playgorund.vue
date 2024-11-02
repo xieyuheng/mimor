@@ -3,9 +3,9 @@ import { reactive } from 'vue'
 import Layout from '../../components/layout/Layout.vue'
 import PlaygorundPreview from './PlaygorundPreview.vue'
 import PlaygorundTextarea from './PlaygorundTextarea.vue'
-import { editorCreate } from './State'
+import { State } from './State'
 
-const state = reactive(editorCreate())
+const state = reactive(new State())
 </script>
 
 <template>
