@@ -49,7 +49,7 @@ function fullscreenSupported() {
         target="_blank"
         :title="lang.isZh() ? '在新的标签中打开' : 'Open in new tab'"
       >
-        <ArrowTopRightOnSquareIcon class="mb-0.5 h-5 w-5" />
+        <ArrowTopRightOnSquareIcon class="h-5 w-5" />
       </a>
 
       <template v-if="fullscreenSupported()">
@@ -58,7 +58,7 @@ function fullscreenSupported() {
           :title="lang.isZh() ? '进入全屏' : 'Enter fullscreen'"
           @click="state.isFullscreen = true"
         >
-          <ArrowsPointingOutIcon class="mb-0.5 h-5 w-5" />
+          <ArrowsPointingOutIcon class="h-5 w-5" />
         </button>
 
         <button
@@ -66,7 +66,7 @@ function fullscreenSupported() {
           :title="lang.isZh() ? '退出全屏' : 'Exit fullscreen'"
           @click="state.isFullscreen = false"
         >
-          <ArrowsPointingInIcon class="mb-0.5 h-5 w-5" />
+          <ArrowsPointingInIcon class="h-5 w-5" />
         </button>
       </template>
 
