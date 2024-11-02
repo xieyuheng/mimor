@@ -1,4 +1,8 @@
 export class State {
-  content = ''
+  content: string
   isFocused = false
+
+  constructor(options: { content: string }) {
+    this.content = options.content
+  }
 }

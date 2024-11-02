@@ -32,21 +32,23 @@
     "@xieyuheng/x-markdown": "^0.3.3",
     "@xieyuheng/x-node": "^0.1.2",
     "js-base64": "^3.7.7",
+    "lodash": "^4.17.21",
     "tailwindcss": "^3.4.14",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
+    "@types/lodash": "^4.17.13",
+    "@vitejs/plugin-vue": "^5.1.4",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
     "prettier-plugin-organize-imports": "^4.1.0",
     "prettier-plugin-tailwindcss": "^0.6.8",
     "typescript": "^5.6.3",
-    "vue-tsc": "^2.1.10",
     "vite": "^5.4.10",
-    "@vitejs/plugin-vue": "^5.1.4",
+    "vite-plugin-dts": "^4.3.0",
     "vite-plugin-node-polyfills": "^0.22.0",
-    "vite-plugin-dts": "^4.3.0"
+    "vue-tsc": "^2.1.10"
   }
 }
