@@ -21,7 +21,7 @@ const props = defineProps<{
 }>()
 
 const lang = useGlobalLang()
-const origin = 'https://mimor.app'
+const origin = 'https://mimor.xieyuheng.com'
 
 function fullscreenSupported() {
   return document.fullscreenEnabled

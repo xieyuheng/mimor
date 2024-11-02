@@ -6,7 +6,7 @@ import { StateOptions } from './stateLoad'
 const props = defineProps<{ options: StateOptions }>()
 
 const lang = useGlobalLang()
-const origin = 'https://mimor.app'
+const origin = 'https://mimor.xieyuheng.com'
 </script>
 
 <template>
