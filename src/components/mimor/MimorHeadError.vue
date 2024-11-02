@@ -7,6 +7,7 @@ import {
   PlayIcon,
 } from '@heroicons/vue/24/outline'
 import Lang from '../../components/lang/Lang.vue'
+import { config } from '../../config'
 import { useGlobalLang } from '../lang/useGlobalLang'
 import { State } from './State'
 import { stateEditorOpen } from './stateEditorOpen'
@@ -16,8 +17,6 @@ const props = defineProps<{
 }>()
 
 const lang = useGlobalLang()
-
-const origin = 'https://mimor.xieyuheng.com'
 
 function fullscreenSupported() {
   return document.fullscreenEnabled
@@ -46,7 +45,7 @@ function fullscreenSupported() {
       </button>
 
       <a
-        :href="`${origin}/mimors/${state.src}`"
+        :href="`${config.origin}/mimors/${state.src}`"
         target="_blank"
         :title="lang.isZh() ? '在新的标签中打开' : 'Open in new tab'"
       >
@@ -71,16 +70,12 @@ function fullscreenSupported() {
         </button>
       </template>
 
-      <a
-        :href="origin"
-        target="_blank"
-        :title="lang.isZh() ? '打开 Mimor 主页' : 'Open Mimor homepage'"
-      >
+      <div>
         <Lang class="whitespace-pre font-light">
           <template #zh>谜墨</template>
           <template #en>Mimor</template>
         </Lang>
-      </a>
+      </div>
     </div>
   </div>
 </template>

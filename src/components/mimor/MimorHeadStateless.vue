@@ -6,7 +6,6 @@ import { StateOptions } from './stateLoad'
 const props = defineProps<{ options: StateOptions }>()
 
 const lang = useGlobalLang()
-const origin = 'https://mimor.xieyuheng.com'
 </script>
 
 <template>
@@ -14,16 +13,12 @@ const origin = 'https://mimor.xieyuheng.com'
     <div></div>
 
     <div class="flex items-center space-x-4">
-      <a
-        :href="origin"
-        target="_blank"
-        :title="lang.isZh() ? '打开 Mimor 主页' : 'Open Mimor homepage'"
-      >
+      <div>
         <Lang class="whitespace-pre font-light">
           <template #zh>谜墨</template>
           <template #en>Mimor</template>
         </Lang>
-      </a>
+      </div>
     </div>
   </div>
 </template>
