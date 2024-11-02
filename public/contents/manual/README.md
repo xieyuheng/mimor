@@ -1,1 +1,0 @@
-# Mimor Manual
