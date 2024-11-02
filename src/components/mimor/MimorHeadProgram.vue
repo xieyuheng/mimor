@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import {
-  ArrowTopRightOnSquareIcon,
   ArrowsPointingInIcon,
   ArrowsPointingOutIcon,
   BackspaceIcon,
@@ -8,7 +7,6 @@ import {
   PlayIcon,
 } from '@heroicons/vue/24/outline'
 import Lang from '../../components/lang/Lang.vue'
-import { config } from '../../config'
 import { useGlobalLang } from '../lang/useGlobalLang'
 import { Program } from './Program'
 import { State } from './State'
@@ -63,14 +61,6 @@ function fullscreenSupported() {
       >
         <PlayIcon class="h-5 w-5" />
       </button>
-
-      <a
-        :href="`${config.origin}/mimors/${state.src}`"
-        target="_blank"
-        :title="lang.isZh() ? '在新的标签中打开' : 'Open in new tab'"
-      >
-        <ArrowTopRightOnSquareIcon class="h-5 w-5" />
-      </a>
 
       <template v-if="fullscreenSupported()">
         <button
