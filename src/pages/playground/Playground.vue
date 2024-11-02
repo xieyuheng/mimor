@@ -29,24 +29,22 @@ watch(
 
 <template>
   <Layout>
-    <form class="flex h-full flex-col p-3 sm:p-6">
-      <div class="flex flex-col sm:h-full sm:flex-row">
-        <div
-          class="flex h-full min-h-[24rem] w-full flex-col border border-black sm:min-h-[1rem] sm:overflow-auto dark:border-white"
-        >
-          <PlaygroundTextarea :state />
-        </div>
-
-        <div v-show="responsive.isMobile()" class="pt-3"></div>
-
-        <div
-          class="flex min-h-full w-full flex-col border border-black sm:min-h-[1rem] sm:overflow-auto dark:border-white"
-        >
-          <PlaygroundPreview class="h-full" :state />
-        </div>
-
-        <div v-show="responsive.isMobile()" class="pt-3"></div>
+    <div class="flex flex-col p-3 sm:h-full sm:flex-row sm:space-x-4 sm:p-6">
+      <div
+        class="flex h-full min-h-[24rem] w-full flex-col border border-black sm:min-h-[1rem] sm:overflow-auto dark:border-white"
+      >
+        <PlaygroundTextarea :state />
       </div>
-    </form>
+
+      <div v-show="responsive.isMobile()" class="pt-3"></div>
+
+      <div
+        class="flex min-h-full w-full flex-col sm:min-h-[1rem] sm:overflow-auto"
+      >
+        <PlaygroundPreview class="h-full" :state />
+      </div>
+
+      <div v-show="responsive.isMobile()" class="pt-3"></div>
+    </div>
   </Layout>
 </template>
