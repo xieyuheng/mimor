@@ -6,7 +6,6 @@ import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import Layout from '../../components/layout/Layout.vue'
 
 const lang = useGlobalLang()
-
 const route = useRoute()
 </script>
 
