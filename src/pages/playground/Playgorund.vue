@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
-import PageLayout from '../../layouts/page-layout/PageLayout.vue'
+import Layout from '../../components/layout/Layout.vue'
 import { editorCreate } from './Editor'
 import PlaygorundPreview from './PlaygorundPreview.vue'
 import PlaygorundTextarea from './PlaygorundTextarea.vue'
@@ -9,7 +9,7 @@ const state = reactive({ editor: editorCreate() })
 </script>
 
 <template>
-  <PageLayout>
+  <Layout>
     <div class="flex h-full w-full flex-col p-3 sm:p-6">
       <form class="flex h-full flex-col overflow-y-auto">
         <div class="flex flex-col sm:h-full sm:flex-row">
@@ -27,5 +27,5 @@ const state = reactive({ editor: editorCreate() })
         </div>
       </form>
     </div>
-  </PageLayout>
+  </Layout>
 </template>

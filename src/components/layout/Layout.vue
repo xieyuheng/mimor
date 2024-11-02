@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import PageFoot from './PageFoot.vue'
-import PageHead from './PageHead.vue'
+import Foot from './Foot.vue'
+import Head from './Head.vue'
 </script>
 
 <template>
@@ -9,7 +9,7 @@ import PageHead from './PageHead.vue'
       <div
         class="flex h-12 items-center border-b border-stone-600 sm:h-16 dark:border-stone-400"
       >
-        <PageHead class="px-3 shadow-sm sm:px-6" />
+        <Head class="px-3 shadow-sm sm:px-6" />
       </div>
     </div>
 
@@ -19,7 +19,7 @@ import PageHead from './PageHead.vue'
       </div>
 
       <div class="flex justify-end px-3 pb-4 sm:px-6">
-        <PageFoot />
+        <Foot />
       </div>
     </div>
   </div>

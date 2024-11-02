@@ -3,7 +3,7 @@ import { Head } from '@vueuse/head'
 import { useRoute } from 'vue-router'
 import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
-import PageLayout from '../../layouts/page-layout/PageLayout.vue'
+import Layout from '../../components/layout/Layout.vue'
 
 const lang = useGlobalLang()
 
@@ -11,7 +11,7 @@ const route = useRoute()
 </script>
 
 <template>
-  <PageLayout>
+  <Layout>
     <Head>
       <title v-if="lang.isZh()">404 | 谜墨</title>
       <title v-else>404 | Mimor</title>
@@ -31,5 +31,5 @@ const route = useRoute()
 
       <div class="overflow-x-auto font-mono text-sm">{{ route.fullPath }}</div>
     </div>
-  </PageLayout>
+  </Layout>
 </template>

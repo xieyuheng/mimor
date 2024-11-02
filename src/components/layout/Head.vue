@@ -3,7 +3,7 @@ import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import Hyperlink from '../../components/utils/Hyperlink.vue'
 import { useGlobalTheme } from '../../models/theme'
-import PageLogo from './PageLogo.vue'
+import Logo from './Logo.vue'
 
 const lang = useGlobalLang()
 const theme = useGlobalTheme()
@@ -12,7 +12,7 @@ const theme = useGlobalTheme()
 <template>
   <div class="flex w-full items-baseline justify-between">
     <div class="flex">
-      <PageLogo class="text-2xl" />
+      <Logo class="text-2xl" />
     </div>
 
     <div class="flex space-x-3 text-lg">
