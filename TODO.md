@@ -1,1 +1,2 @@
-[docs] mimor web component 使用文档
+[docs] readme -- usage -- cdn and npm
+[docs] readme -- examples -- link to playground with screenshot
