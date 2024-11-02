@@ -14,7 +14,7 @@ const lang = useGlobalLang()
     name="text"
     spellcheck="false"
     rows="1"
-    v-model="state.editor.content"
+    v-model="state.content"
     :placeholder="lang.isZh() ? '创作谜墨卡片 *^-^*' : 'Create mimor cards :)'"
   ></textarea>
 </template>

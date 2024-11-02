@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import Layout from '../../components/layout/Layout.vue'
-import { editorCreate } from './Editor'
 import PlaygorundPreview from './PlaygorundPreview.vue'
 import PlaygorundTextarea from './PlaygorundTextarea.vue'
+import { editorCreate } from './State'
 
-const state = reactive({ editor: editorCreate() })
+const state = reactive(editorCreate())
 </script>
 
 <template>

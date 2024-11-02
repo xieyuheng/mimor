@@ -1,5 +1,11 @@
-import { Editor } from './Editor'
-
 export type State = {
-  editor: Editor
+  content: string
+  isFocused: boolean
+}
+
+export function editorCreate(): State {
+  return {
+    content: '',
+    isFocused: false,
+  }
 }

@@ -12,8 +12,8 @@ defineProps<{ state: State }>()
 
 <template>
   <x-mimor
-    :src="`data:text/plain;base64,${Base64.encode(state.editor.content)}`"
-    :text="state.editor.content"
+    :src="`data:text/plain;base64,${Base64.encode(state.content)}`"
+    :text="state.content"
     :reduced-motion="true"
     :lang-tag="lang.tag"
     :theme-name="theme.name"
