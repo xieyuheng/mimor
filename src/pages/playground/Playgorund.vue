@@ -20,7 +20,7 @@ const state = reactive({ editor: editorCreate() })
           </div>
 
           <div
-            class="flex min-h-[24rem] w-full flex-col border-b border-l border-r border-black sm:min-h-[1rem] sm:overflow-auto sm:border-y sm:border-l-0 dark:border-white"
+            class="flex min-h-full w-full flex-col border-b border-l border-r border-black sm:min-h-[1rem] sm:overflow-auto sm:border-y sm:border-l-0 dark:border-white"
           >
             <PlaygorundPreview class="h-full" :state />
           </div>

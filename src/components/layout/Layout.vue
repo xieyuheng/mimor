@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useResponsive } from '../../models/responsive'
-import Foot from './Foot.vue'
 import Head from './Head.vue'
 
 const responsive = useResponsive()
@@ -24,10 +23,6 @@ const responsive = useResponsive()
     >
       <div class="flex h-full w-full flex-col overflow-auto">
         <slot />
-      </div>
-
-      <div class="flex justify-end px-3 pb-4 sm:px-6">
-        <Foot />
       </div>
     </div>
   </div>
