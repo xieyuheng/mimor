@@ -42,6 +42,17 @@ const theme = useGlobalTheme()
           <template #en>English/中文</template>
         </Lang>
       </button>
+
+      <a
+        target="_blank"
+        href="https://github.com/xieyuheng/mimor"
+        class="flex items-center whitespace-nowrap hover:underline"
+      >
+        <Lang>
+          <template #zh>源代码</template>
+          <template #en>Source Code</template>
+        </Lang>
+      </a>
     </div>
   </div>
 </template>
