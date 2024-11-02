@@ -13,7 +13,7 @@ defineProps<{ options: StateOptions }>()
     <MimorHeadStateless :options="options" />
 
     <div
-      class="space-y-3 bg-white p-3 text-xl text-stone-500 dark:bg-stone-900 dark:text-stone-300"
+      class="space-y-3 bg-white p-3 text-stone-500 dark:bg-stone-900 dark:text-stone-300"
     >
       <Lang>
         <template #zh> 谜墨加载中⋯⋯ </template>
@@ -23,10 +23,10 @@ defineProps<{ options: StateOptions }>()
       <div>
         <Lang>
           <template #zh>
-            <div>来源：{{ options.src }}</div>
+            <div class="break-all">来源：{{ options.src }}</div>
           </template>
           <template #en>
-            <div>Source: {{ options.src }}</div>
+            <div class="break-all">Source: {{ options.src }}</div>
           </template>
         </Lang>
       </div>
