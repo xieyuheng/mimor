@@ -48,7 +48,6 @@ type Props = {
   text?: string
   langTag?: 'en' | 'zh'
   themeName?: 'dark' | 'light'
-  reducedMotion?: boolean
 }
 ```
 
