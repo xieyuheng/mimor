@@ -31,7 +31,7 @@ watch(
   <Layout>
     <div class="flex flex-col p-3 sm:h-full sm:flex-row sm:space-x-4 sm:p-6">
       <div
-        class="flex h-full min-h-[24rem] w-full flex-col border border-black sm:min-h-[1rem] sm:overflow-auto dark:border-white"
+        class="flex h-full min-h-[27rem] w-full flex-col border border-black sm:min-h-[1rem] sm:overflow-auto dark:border-white"
       >
         <PlaygroundTextarea :state />
       </div>
