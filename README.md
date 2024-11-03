@@ -10,13 +10,13 @@
 
 ### Install
 
-Using CDN:
+#### Using CDN
 
 ```html
 <script src="https://unpkg.com/mimor"></script>
 ```
 
-Using npm:
+#### Using npm
 
 ```shell
 npm install mimor
