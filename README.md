@@ -1,8 +1,8 @@
 # Mimor Web Component
 
-[ [Website](https://mimor.xieyuheng.com)
-| [Manual](https://readonly.link/manuals/https://mimor.app/contents/manual/en.json)
-| [手册](https://readonly.link/manuals/https://mimor.app/contents/manual/zh.json) ]
+[ [Playground](https://mimor.xieyuheng.com/playground) ]
+
+A web component for creating flashcard by simple `<question>` & `<answer>` markup.
 
 > Making memory a choice.
 
