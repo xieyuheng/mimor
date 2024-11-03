@@ -4,7 +4,6 @@ import { stateCreate } from './stateCreate'
 export interface StateOptions {
   src: string
   text?: string
-  withMetaThemeColor?: boolean
 }
 
 export async function stateLoad(options: StateOptions): Promise<State> {

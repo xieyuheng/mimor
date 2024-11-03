@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { XElement } from '@xieyuheng/x-node'
-import { onMounted, watch } from 'vue'
+import { onMounted } from 'vue'
 import MimorHeadProgram from '../MimorHeadProgram.vue'
 import MimorInputReplay from '../MimorInputReplay.vue'
 import MimorStatistics from '../MimorStatistics.vue'
@@ -19,16 +19,6 @@ onMounted(() => {
   props.program.statistics.endedAt = Date.now()
   props.state.isFinished = true
 })
-
-watch(
-  () => props.state.theme.name,
-  () => {
-    if (props.state.withMetaThemeColor) {
-      props.state.themeColor = props.state.theme.color(400)
-    }
-  },
-  { immediate: true },
-)
 </script>
 
 <template>

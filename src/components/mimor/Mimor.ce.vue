@@ -11,10 +11,9 @@ import { stateReload } from './stateReload'
 const props = defineProps<{
   src: string
   text?: string
-  withMetaThemeColor?: boolean
-  reducedMotion?: boolean
   langTag?: string
   themeName?: string
+  reducedMotion?: boolean
 }>()
 
 const state = ref<State>()

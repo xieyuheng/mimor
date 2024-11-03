@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { XElement, isElement } from '@xieyuheng/x-node'
-import { reactive, watch } from 'vue'
+import { reactive } from 'vue'
 import MimorHeadProgram from '../MimorHeadProgram.vue'
 import MimorInputRemembering from '../MimorInputRemembering.vue'
 import MimorTransitionCard from '../MimorTransitionCard.vue'
@@ -9,23 +9,13 @@ import { State } from '../State'
 import Node from '../nodes/Node.vue'
 import Nodes from '../nodes/Nodes.vue'
 
-const props = defineProps<{
+defineProps<{
   state: State
   program: Program
   element: XElement
 }>()
 
 const remembering = reactive({ revealed: false })
-
-watch(
-  () => props.state.theme.name,
-  () => {
-    if (props.state.withMetaThemeColor) {
-      props.state.themeColor = props.state.theme.color(300)
-    }
-  },
-  { immediate: true },
-)
 </script>
 
 <template>

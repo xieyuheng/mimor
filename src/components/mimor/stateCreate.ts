@@ -5,12 +5,11 @@ import { programCreate } from './programCreate'
 
 export function stateCreate(options: {
   src: string
-  withMetaThemeColor?: boolean
   text: string
   isTextGiven?: boolean
   reducedMotion?: boolean
 }): State {
-  const { src, withMetaThemeColor, text, isTextGiven, reducedMotion } = options
+  const { src, text, isTextGiven, reducedMotion } = options
 
   const theme = new Theme('white')
   const metadata = { keywords: [] }
@@ -22,7 +21,6 @@ export function stateCreate(options: {
     originalText: text,
     theme,
     metadata,
-    withMetaThemeColor,
     isFullscreen: false,
     reducedMotion,
   }

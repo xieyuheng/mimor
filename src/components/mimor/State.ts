@@ -9,8 +9,6 @@ export type State = {
   originalText: string
   isTextGiven?: boolean
   theme: Theme
-  withMetaThemeColor?: boolean
-  themeColor?: string
   program?: Program
   error?: Error
   isFullscreen: boolean
