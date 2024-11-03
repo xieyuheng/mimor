@@ -20,8 +20,6 @@ A web component for creating flashcard by simple `<question>` & `<answer>` marku
 npm install mimor
 ```
 
-And:
-
 ```js
 import 'mimor'
 ```
