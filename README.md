@@ -4,8 +4,6 @@
 
 A web component for creating flashcard by simple `<question>` & `<answer>` markup.
 
-> Making memory a choice.
-
 ## Usage
 
 ### Install
