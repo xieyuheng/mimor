@@ -99,7 +99,7 @@ It is ok to use lisp-case naming convention in html:
 You can also use this [in browser editor](https://editor.xieyuheng.com),
 to edit mimors and preview mimors locally.
 
-- Currently we support Chromium-based browsers (such as Chrome and Edge).
+Currently we support Chromium-based browsers (such as Chrome and Edge).
 
 [![](assets/screenshots/editor-1-dark.png)](https://editor.xieyuheng.com)
 
